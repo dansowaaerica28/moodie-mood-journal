@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Moodie </title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Theme Button -->
+        <button id="dark-mode-btn">🌙</button>
+
+        <!-- Header -->
+        <header>
+            <h1>Moodie </h1>
+
+            <p>How are you feeling today?</p>
+
+            <p id="mood-greeting">
+                Choose a mood and I'll be here with you.
+            </p>
+        </header>
+
+        <!-- Mood Selection -->
+        <section class="mood-section">
+
+            <div class="moods">
+
+                <button>😊<span>Happy</span></button>
+                <button>😌<span>Calm</span></button>
+                <button>😐<span>Okay</span></button>
+                <button>😔<span>Sad</span></button>
+                <button>😤<span>Frustrated</span></button>
+                <button>😴<span>Tired</span></button>
+
+            </div>
+
+        </section>
+
+        <!-- Journal Input -->
+        <section class="journal-input">
+
+            <h2>What's on your mind? 💭</h2>
+
+            <textarea
+                placeholder="Tell me anything..."
+            ></textarea>
+
+            <button class="save-btn">
+                Save Entry 💗
+            </button>
+
+        </section>
+
+        <!-- Mood Summary -->
+        <section class="mood-summary">
+
+            <h2>Mood Summary 📊</h2>
+
+            <p id="mood-count">
+                No moods recorded yet 🌷
+            </p>
+
+        </section>
+
+        <!-- Journal Entries -->
+        <section class="journal-section">
+
+            <h2>My Journal 📖</h2>
+
+            <button id="clear-btn">
+                Clear All Entries 🧹
+            </button>
+
+            <div id="entries"></div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

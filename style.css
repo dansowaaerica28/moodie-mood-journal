@@ -1,0 +1,342 @@
+* 
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fdf6f9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.app {
+    position: relative;
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+   HEADER
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+#mood-greeting {
+    font-size: 14px;
+    color: #9b6680;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    min-height: 22px;
+    transition: 0.3s ease;
+}
+
+.welcome-text {
+    font-size: 14px;
+    color: #999;
+    margin-top: -15px;
+}
+
+
+#dark-mode-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #f1e6f5;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.moods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.moods button {
+    border: none;
+    background: #fff4f7;
+    padding: 15px 8px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.moods button span {
+    display: block;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.moods button.selected {
+    background: #e9a8bd;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+textarea {
+    width: 100%;
+    height: 130px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    resize: none;
+    font-size: 14px;
+    outline: none;
+}
+
+.save-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    background: #e9a8bd;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.mood-summary {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 18px;
+    background: #fff8fa;
+    border-radius: 15px;
+}
+
+.mood-summary h2 {
+    margin-bottom: 10px;
+}
+
+#mood-count {
+    text-align: left;
+    margin: 0;
+    color: #666;
+    line-height: 1.7;
+}
+
+
+.journal-section {
+    margin-top: 35px;
+    width: 100%;
+}
+
+.journal-section h2 {
+    margin-bottom: 15px;
+}
+
+#entries {
+    width: 100%;
+}
+
+.entry {
+    width: 100%;
+    background: #fff4f7;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 12px;
+    animation: fadeIn 0.4s ease;
+}
+
+.entry h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.entry p {
+    text-align: left;
+    margin: 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+.edit-btn,
+.delete-btn {
+    margin-top: 12px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    margin-right: 6px;
+    background: #eadcf5;
+    color: #704a8a;
+}
+
+.delete-btn {
+    background: #f5d6df;
+    color: #8a4a5b;
+}
+
+#clear-btn {
+    margin-bottom: 15px;
+    padding: 9px 14px;
+    border: none;
+    border-radius: 10px;
+    background: #f5d6df;
+    color: #8a4a5b;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+
+.empty-message {
+    text-align: center;
+    color: #999;
+    background: #fff8fa;
+    padding: 20px;
+    border-radius: 15px;
+    line-height: 1.6;
+}
+
+
+
+button {
+    transition: 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+
+body.dark-mode {
+    background: #1f1b22;
+}
+
+body.dark-mode .app {
+    background: #2b252f;
+    color: white;
+}
+
+body.dark-mode p {
+    color: #ccc;
+}
+
+body.dark-mode textarea {
+    background: #3a333f;
+    color: white;
+    border-color: #514857;
+}
+
+body.dark-mode .moods button {
+    background: #3a333f;
+    color: white;
+}
+
+body.dark-mode .moods button.selected {
+    background: #9b6680;
+}
+
+body.dark-mode .entry {
+    background: #3a333f;
+}
+
+body.dark-mode .entry p {
+    color: #ddd;
+}
+
+body.dark-mode .mood-summary,
+body.dark-mode .empty-message {
+    background: #3a333f;
+    color: #ddd;
+}
+
+
+
+@media (max-width: 500px) {
+
+    body {
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+
+    .app {
+        width: 94%;
+        padding: 22px;
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .moods {
+        gap: 8px;
+    }
+
+    .moods button {
+        padding: 12px 5px;
+        font-size: 22px;
+    }
+
+    .moods button span {
+        font-size: 12px;
+    }
+
+    textarea {
+        height: 120px;
+    }
+
+    .entry {
+        padding: 13px;
+    }
+
+}
